@@ -68,6 +68,14 @@ func sortNatInstancesByNumberOfSubnet(instances []*NATInstance) {
 	sort.SliceStable(instances, func(i, j int) bool {
 		return len(instances[i].Subnets) < len(instances[j].Subnets)
 	})
+	/*
+		For the bonus question, this function can be modifed like this:
+			return sumWeightOf(instances[i].Subnets) < sumWeightOf(instances[j].Subnets)
+		
+		sumWeightOf: return total weight of all Subnets
+
+		With good inputs, it may have an output that close to what you need.
+	*/
 }
 
 // allocate Subnets to Instances

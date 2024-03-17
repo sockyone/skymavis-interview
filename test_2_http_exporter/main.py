@@ -7,9 +7,9 @@ INFURA_ID = os.environ.get("INFURA_ID", "6d6abba470cc4091ba922c3d09459f51")
 
 registry = CollectorRegistry()
 METRICS = {
-    'skymavis_ankr_infura_sync_lag': Gauge('skymavis_ankr_infura_sync_lag', 'Block number diff', 
+    'skymavis_ankr_infura_sync_lag': Gauge('skymavis_ankr_infura_sync_lag', 'Block number diff between infura and ankr', 
                                         registry=registry),
-    'skymavis_ankr_infura_success': Gauge('skymavis_ankr_infura_success', 'Block number diff', 
+    'skymavis_ankr_infura_success': Gauge('skymavis_ankr_infura_success', 'Success if lag between infura and ankr is less than 5', 
                                         registry=registry),
 }
 
